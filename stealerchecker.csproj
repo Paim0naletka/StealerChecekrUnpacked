@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\fox89\Desktop\StealerChecker\stealerchecker.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68CAA483-89C0-48A3-A0A4-E5F60AB2C0DC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>stealerchecker</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>9.2.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>stealerchecker</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Colorful.Console">
+      <HintPath>lib\Colorful.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandLine">
+      <HintPath>lib\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Everything">
+      <HintPath>lib\Everything.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentFTP">
+      <HintPath>lib\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="Leaf.xNet">
+      <HintPath>lib\Leaf.xNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ScrapySharp">
+      <HintPath>lib\ScrapySharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="TemnijExt">
+      <HintPath>lib\TemnijExt.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ext.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="StealerType.cs" />
+    <Compile Include="DiscordChecker.cs" />
+    <Compile Include="Models\CheckResult.cs" />
+    <Compile Include="Models\ResponseModel.cs" />
+    <Compile Include="Checkers\IChecker.cs" />
+    <Compile Include="Checkers\Aternos.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
